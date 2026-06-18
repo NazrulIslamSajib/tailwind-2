@@ -330,9 +330,6 @@
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
-  .rounded-sm {
-    border-radius: var(--radius-sm);
-  }
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
@@ -363,12 +360,6 @@
   }
   .bg-white {
     background-color: var(--color-white);
-  }
-  .bg-\[url\(\'\.\/im\.png\'\)\] {
-    background-image: url('./im.png');
-  }
-  .bg-\[url\(\'\.\/img\/mask\.png\'\)\] {
-    background-image: url('./img/mask.png');
   }
   .bg-\[url\(\'\.\/img\/sec-img\.png\'\)\] {
     background-image: url('./img/sec-img.png');
@@ -450,6 +441,9 @@
   }
   .pl-\[22px\] {
     padding-left: 22px;
+  }
+  .text-center {
+    text-align: center;
   }
   .font-DM-Sans {
     font-family: var(--font-DM-Sans);
@@ -668,6 +662,11 @@
       width: 50%;
     }
   }
+  .lg\:w-fit {
+    @media (width >= 64rem) {
+      width: fit-content;
+    }
+  }
   .lg\:scale-\[1\.6\] {
     @media (width >= 64rem) {
       scale: 1.6;
@@ -678,9 +677,19 @@
       flex-direction: row;
     }
   }
+  .lg\:items-center {
+    @media (width >= 64rem) {
+      align-items: center;
+    }
+  }
   .lg\:justify-between {
     @media (width >= 64rem) {
       justify-content: space-between;
+    }
+  }
+  .lg\:justify-center {
+    @media (width >= 64rem) {
+      justify-content: center;
     }
   }
   .lg\:gap-0 {
@@ -698,6 +707,21 @@
       gap: 50px;
     }
   }
+  .lg\:gap-\[102\] {
+    @media (width >= 64rem) {
+      gap: 102;
+    }
+  }
+  .lg\:gap-\[102px\] {
+    @media (width >= 64rem) {
+      gap: 102px;
+    }
+  }
+  .lg\:px-\[100px\] {
+    @media (width >= 64rem) {
+      padding-inline: 100px;
+    }
+  }
   .lg\:pt-5 {
     @media (width >= 64rem) {
       padding-top: calc(var(--spacing) * 5);
@@ -706,11 +730,6 @@
   .lg\:pt-\[83px\] {
     @media (width >= 64rem) {
       padding-top: 83px;
-    }
-  }
-  .lg\:pr-6 {
-    @media (width >= 64rem) {
-      padding-right: calc(var(--spacing) * 6);
     }
   }
   .lg\:pr-24 {
@@ -746,13 +765,6 @@
   .xl\:pb-12 {
     @media (width >= 80rem) {
       padding-bottom: calc(var(--spacing) * 12);
-    }
-  }
-  .lg\:xl\:gap-6 {
-    @media (width >= 64rem) {
-      @media (width >= 80rem) {
-        gap: calc(var(--spacing) * 6);
-      }
     }
   }
 }
