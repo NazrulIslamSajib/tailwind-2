@@ -22,7 +22,6 @@
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
-    --radius-sm: 0.25rem;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
     --default-font-family: var(--font-sans);
@@ -192,9 +191,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .h-\[70px\] {
     height: 70px;
   }
@@ -212,9 +208,6 @@
   }
   .h-full {
     height: 100%;
-  }
-  .w-1 {
-    width: var(--spacing);
   }
   .w-1\/5 {
     width: calc(1 / 5 * 100%);
@@ -236,12 +229,6 @@
   }
   .w-full {
     width: 100%;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -266,9 +253,6 @@
   }
   .gap-2\.5 {
     gap: calc(var(--spacing) * 2.5);
-  }
-  .gap-3 {
-    gap: calc(var(--spacing) * 3);
   }
   .gap-3\.5 {
     gap: calc(var(--spacing) * 3.5);
@@ -382,9 +366,6 @@
   .px-\[35px\] {
     padding-inline: 35px;
   }
-  .py-1 {
-    padding-block: var(--spacing);
-  }
   .py-1\.5 {
     padding-block: calc(var(--spacing) * 1.5);
   }
@@ -418,14 +399,8 @@
   .py-\[88px\] {
     padding-block: 88px;
   }
-  .pt-1 {
-    padding-top: var(--spacing);
-  }
   .pt-1\.5 {
     padding-top: calc(var(--spacing) * 1.5);
-  }
-  .pt-3 {
-    padding-top: calc(var(--spacing) * 3);
   }
   .pt-3\.5 {
     padding-top: calc(var(--spacing) * 3.5);
@@ -539,6 +514,9 @@
   .text-\[\#11A11E\] {
     color: #11A11E;
   }
+  .text-\[\#343F18\] {
+    color: #343F18;
+  }
   .text-\[\#01680A\] {
     color: #01680A;
   }
@@ -553,13 +531,6 @@
   }
   .text-white {
     color: var(--color-white);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .md\:w-3\/10 {
     @media (width >= 48rem) {
@@ -632,19 +603,9 @@
       display: block;
     }
   }
-  .lg\:w-2\/5 {
-    @media (width >= 64rem) {
-      width: calc(2 / 5 * 100%);
-    }
-  }
   .lg\:w-3\/5 {
     @media (width >= 64rem) {
       width: calc(3 / 5 * 100%);
-    }
-  }
-  .lg\:w-3\/10 {
-    @media (width >= 64rem) {
-      width: calc(3 / 10 * 100%);
     }
   }
   .lg\:w-\[20\%\] {
@@ -707,19 +668,9 @@
       gap: 50px;
     }
   }
-  .lg\:gap-\[102\] {
-    @media (width >= 64rem) {
-      gap: 102;
-    }
-  }
   .lg\:gap-\[102px\] {
     @media (width >= 64rem) {
       gap: 102px;
-    }
-  }
-  .lg\:px-\[100px\] {
-    @media (width >= 64rem) {
-      padding-inline: 100px;
     }
   }
   .lg\:pt-5 {
@@ -814,18 +765,12 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
     }
   }
 }
